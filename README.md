@@ -92,6 +92,7 @@ CKEDITOR_5_CONFIGS = {
         'width': '100%',
     }
 }
+CKEDITOR_5_FILE_UPLOAD_PERMISSION = "any" # In production, change "any" to "staff"
 ```
 
 ## 🤝 Contributing
