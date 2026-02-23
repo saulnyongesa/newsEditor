@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="{% static 'django_ckeditor_5/dist/styles.css' %}">
+
+<div class="container mt-5">
+    <h2>Create News Update</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Publish News</button>
+    </form>
+</div>
+
+<script src="{% static 'django_ckeditor_5/dist/bundle.js' %}"></script>

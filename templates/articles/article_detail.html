@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <h1 class="fw-bold mb-3">{{ article.title }}</h1>
+            <p class="text-muted small">Published on {{ article.created_at|date:"F d, Y" }}</p>
+            <hr>
+
+            <article class="news-body">
+                {{ article.content|safe }}
+            </article>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Styling for the rendered output */
+    .news-body img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 20px 0;
+    }
+    .news-body figcaption {
+        text-align: center;
+        font-style: italic;
+        color: #666;
+        font-size: 0.9rem;
+    }
+    .news-body h1, .news-body h2, .news-body h3 {
+        margin-top: 1.5rem;
+    }
+</style>
+{% endblock %}
